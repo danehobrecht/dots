@@ -8,4 +8,4 @@
 export PATH="$PATH:/home/dane/.local/bin"
 
 # Night shift equivalent for `wayland` compositors
-wlsunset
+exec wlsunset

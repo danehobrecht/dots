@@ -55,3 +55,6 @@ set backspace=indent,eol,start
 " - Might need to `mkdir ~/.vim/undodir`
 set undofile
 set undodir=~/.vim/undodir
+
+" Disable `term-gui-colors` for support with `foot`
+set notgc

@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 #
-# Dependencies: `sway foot wmenu autotiling grim polkit-gnome swaylock swayidle swaybg auto-cpufreq mpv`
+# Dependencies: `sway foot fuzzel autotiling grim polkit-gnome swaylock swayidle swaybg auto-cpufreq mpv gnome-themes-extra`
 
 ### Variables
 #
@@ -18,7 +18,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run
+set $menu fuzzel
 
 ### Output configuration
 #
@@ -248,3 +248,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Dynamic window tiling
 exec_always --no-startup-id autotiling
+
+# Day/Night gamma adjustments configured for Irvine, CA (Night Shift)
+exec_always --no-startup-id wlsunset -l 33.6 -L -117.8
