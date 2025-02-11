@@ -7,5 +7,5 @@
 # Created by `pipx` on 2023-09-11 00:08:28
 export PATH="$PATH:/home/dane/.local/bin"
 
-# Night shift equivalent for `wayland` compositors
-exec wlsunset
+# Fix disappearing cursor on `sway`
+WLR_NO_HARDWARE_CURSORS=1
