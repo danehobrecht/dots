@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 #
-# Dependencies: `sway foot fuzzel autotiling grim polkit-gnome swaylock swayidle swaybg auto-cpufreq mpv gnome-themes-extra slurp i3status`
+# Dependencies: `sway foot fuzzel autotiling grim polkit-gnome swaylock swayidle swaybg auto-cpufreq mpv gnome-themes-extra slurp i3status qt6ct adwaita-qt6`
 
 ### Variables
 #
@@ -45,20 +45,20 @@ output * bg ~/pictures/other/wallpapers/wallpaper-001.jpeg fill
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec swayidle -w \
-		 timeout 300 'swaylock -f -c 000000' \
-		 timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-		 before-sleep 'swaylock -f -c 000000'
+	timeout 300 'swaylock -f -c 000000' \
+	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	before-sleep 'swaylock -f -c 000000'
 
 ### Input configuration
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#	   dwt enabled
-#	   tap enabled
-#	   natural_scroll enabled
-#	   middle_emulation enabled
-#   }
+#	input "2:14:SynPS/2_Synaptics_TouchPad" {
+#		dwt enabled
+#		tap enabled
+#		natural_scroll enabled
+#		middle_emulation enabled
+#	}
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -81,7 +81,14 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Start your launcher
-bindsym $mod+space exec $menu
+bindsym $mod+Space exec $menu
+
+# Border Styling
+bindsym $mod+b border toggle
+default_border normal 0
+gaps inner 8
+
+font pango:Adwaita Sans 16
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -152,7 +159,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
+bindsym $mod+c splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
@@ -164,10 +171,10 @@ bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # Swap focus between the tiling area and the floating area
-bindsym $mod+Shift+f focus mode_toggle
+bindsym $mod+Shift+Space focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
@@ -187,20 +194,25 @@ bindsym $mod+minus scratchpad show
 # Resizing containers:
 #
 mode "resize" {
-	# left will shrink the containers width
-	# right will grow the containers width
-	# up will shrink the containers height
-	# down will grow the containers height
-	bindsym $left resize shrink width 10px
-	bindsym $down resize grow height 10px
-	bindsym $up resize shrink height 10px
-	bindsym $right resize grow width 10px
+	bindsym $left resize shrink width 8px
+	bindsym $down resize grow height 8px
+	bindsym $up resize shrink height 8px
+	bindsym $right resize grow width 8px
 
-	# Ditto, with arrow keys
-	bindsym Left resize shrink width 10px
-	bindsym Down resize grow height 10px
-	bindsym Up resize shrink height 10px
-	bindsym Right resize grow width 10px
+	bindsym Shift+$left resize shrink width 64px
+	bindsym Shift+$down resize grow height 64px
+	bindsym Shift+$up resize shrink height 64px
+	bindsym Shift+$right resize grow width 64px
+
+	bindsym Left resize shrink width 8px
+	bindsym Down resize grow height 8px
+	bindsym Up resize shrink height 8px
+	bindsym Right resize grow width 8px
+
+	bindsym Shift+Left resize shrink width 64px
+	bindsym Shift+Down resize grow height 64px
+	bindsym Shift+Up resize shrink height 64px
+	bindsym Shift+Right resize grow width 64px
 
 	# Return to default mode
 	bindsym Return mode "default"
@@ -211,16 +223,16 @@ bindsym $mod+r mode "resize"
 #
 # Utilities:
 #
-	# Special keys to adjust volume via PulseAudio
-	bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-	bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-	bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-	bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-	# Special keys to adjust brightness via brightnessctl
-	bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-	bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-	# Special key to take a screenshot with grim
-	bindsym Print exec grim
+# Special keys to adjust volume via PulseAudio
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+# Special keys to adjust brightness via brightnessctl
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+# Special key to take a screenshot with grim
+bindsym Print exec grim
 
 #
 # Status Bar:
@@ -228,18 +240,27 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	position top
-
 	# When the status_command prints a new line to stdout, swaybar updates.
 	# The default just shows the current date and time.
 	#status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 	status_command i3status
-	font pango:Monospace 12
-
+	font pango:Adwaita Sans 12
 	colors {
 		statusline #ffffff
-		background #323232
+		background #242424
 		inactive_workspace #32323200 #32323200 #5c5c5c
 	}
+}
+
+#for_window [title=".*"] floating enable
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Adwaita'
+    gsettings set $gnome-schema icon-theme 'Adwaita'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
+    gsettings set $gnome-schema font-name 'Adwaita'
 }
 
 include @sysconfdir@/sway/config.d/*
@@ -257,3 +278,9 @@ exec_always --no-startup-id wlsunset -l 33.6 -L -117.8
 
 # Color picker
 # grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-
+
+focus_follows_mouse always
+
+focus_on_window_activation smart
+
+xwayland enable
