@@ -5,9 +5,10 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/workspaces",
+		"hyprland/workspaces",
 		"custom/right-arrow-dark"
 	],
+
 	"modules-center": [
 		"custom/left-arrow-dark",
 		"clock#1",
@@ -19,23 +20,24 @@
 		"clock#3",
 		"custom/right-arrow-dark"
 	],
+
 	"modules-right": [
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
+		//"memory",
+		//"custom/left-arrow-light",
+		//"custom/left-arrow-dark",
+		//"cpu",
+		//"custom/left-arrow-light",
+		//"custom/left-arrow-dark",
 		"battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"disk",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
+		//"disk",
+		//"custom/left-arrow-light",
+		//"custom/left-arrow-dark",
 		"tray"
 	],
 
@@ -43,34 +45,37 @@
 		"format": "",
 		"tooltip": false
 	},
+
 	"custom/left-arrow-light": {
 		"format": "",
 		"tooltip": false
 	},
+
 	"custom/right-arrow-dark": {
 		"format": "",
 		"tooltip": false
 	},
+
 	"custom/right-arrow-light": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
+	"hyprland/workspaces": {},
 
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
 	},
+
 	"clock#2": {
-		"format": "{:%I:%M}",
-		"tooltip": false
+		"format": "{:%I:%M:%S}",
+		"tooltip": false,
+		"interval": 1,
 	},
+
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%m-%d-%Y}",
 		"tooltip": false
 	},
 
@@ -89,14 +94,17 @@
 		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
-	"memory": {
-		"interval": 5,
-		"format": "Mem {}%"
-	},
-	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
-	},
+
+	//"memory": {
+	//	"interval": 5,
+	//	"format": "Mem {}%"
+	//},
+
+	//"cpu": {
+	//	"interval": 5,
+	//	"format": "CPU {usage}%",
+	//},
+
 	"battery": {
 		"states": {
 			"good": 95,
@@ -112,11 +120,13 @@
 			""
 		]
 	},
-	"disk": {
-		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
-		"path": "/"
-	},
+
+	//"disk": {
+	//	"interval": 5,
+	//	"format": "Disk {percentage_used:2}%",
+	//	"path": "/"
+	//},
+
 	"tray": {
 		"icon-size": 20
 	}
