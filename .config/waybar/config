@@ -106,7 +106,7 @@
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "",
+		"format-muted": " 0%",
 		"format-icons": {
 			"headphones": "",
 			"default": [
@@ -140,7 +140,7 @@
 		"tooltip-format-wifi": "{essid}",
 		"tooltip-format-ethernet": "{ifname}",
 		"tooltip-format-disconnected": "Disconnected",
-		"on-click": "foot iwctl",
+		"on-click": "kitty iwctl",
 		"max-length": 50
 	},
 

@@ -8,7 +8,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term kitty
 set $menu fuzzel
 
 ### Output configuration
@@ -47,7 +47,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 bindsym $mod+Space exec $menu
 bindsym $mod+b border toggle
-default_border normal 0
+default_border pixel 0
 gaps inner 8
 font pango:Adwaita Sans 16
 
