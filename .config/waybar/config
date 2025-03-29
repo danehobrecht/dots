@@ -23,6 +23,9 @@
 
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"custom/wellbeing",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -129,7 +132,12 @@
 	//	"interval": 5,
 	//	"format": "CPU {usage}%",
 	//},
-	
+
+	"custom/wellbeing": {
+		"format": "WELLBEING",
+		"on-click": "kitty --hold hypr-wellbeing --show"
+	},
+
 	"network": {
 		//"interface": "wlan0",
 		"format": "{ifname}",
