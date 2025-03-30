@@ -28,6 +28,10 @@ window#waybar { background: #292b2e; }
 	background: #1a1a1a;
 }
 
+/* Customize tooltip popup (calendar, etc.)
+tooltip { background: rgba(26, 26, 26, 0.84); }
+*/
+
 /* Customize active workspace
 #workspaces button.focused
 
