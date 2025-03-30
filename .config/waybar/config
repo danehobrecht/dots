@@ -120,5 +120,8 @@
 		"format-charging": "󰂄 {capacity}%",
 		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 	},
-	"tray": { "icon-size": 24 }
+	"tray": {
+		"spacing": 4,
+		"icon-size": 24
+	}
 }
