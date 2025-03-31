@@ -5,6 +5,7 @@
 	/// General
 	"layer": "top",
 	"position": "top",
+	"font": "Material Design Icons",
 
 	/// Module Containers
 	"modules-left": [

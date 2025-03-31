@@ -1,11 +1,16 @@
 * {
 	font-size: 20px;
-	font-family: monospace;
+	font-family: "Material Design Icons", monospace;
 }
 
-window#waybar { background: #292b2e; }
+window#waybar {
+	/* border-radius: 0px 0px 8px 8px; */
+	color: #ffffff;
+	background: rgba(41, 43, 46, 0.0); /* #292b2e; */
+}
 
 #workspaces button,
+#windows,
 #clock.1,
 #clock.2,
 #clock.3,
@@ -16,7 +21,6 @@ window#waybar { background: #292b2e; }
 #battery,
 #tray {
 	margin: 4px;
-	color: #ffffff;
 	padding: 2px 8px;
 	border-radius: 8px;
 	background: #1a1a1a;
