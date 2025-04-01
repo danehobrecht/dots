@@ -59,64 +59,64 @@
 			}
 		},
 		"actions": {
-			"on-click-right": "mode",
-			"on-click-forward": "tz_up",
+			"on-click-right"   : "mode",
+			"on-click-forward" : "tz_up",
 			"on-click-backward": "tz_down",
-			"on-scroll-up": "shift_up",
-			"on-scroll-down": "shift_down"
+			"on-scroll-up"     : "shift_up",
+			"on-scroll-down"   : "shift_down"
 		}
 	},
 
 	// Right
 	"custom/wellbeing": {
-		"format": "{icon}",
-		"format-icons": ["󰗶"],
+		"format"        : "{icon}",
+		"format-icons"  : ["󰗶"],
 		"tooltip-format": "Well-being",
-		"on-click": "kitty --hold hypr-wellbeing --show"
+		"on-click"      : "kitty --hold hypr-wellbeing --show"
 	},
 	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "󰝟 0%",
+		"format"           : "{icon} {volume:2}%",
+		"format-bluetooth" : "󰂰 {volume}%",
 		"format-icons": {
-			"headphones": "",
 			"default": [
 				"󰕿",
 				"󰖀",
 				"󰕾"
-			]
+			],
+			"headphones"   : "",
+			"default-muted": "󰝟"
 		},
-		"scroll-step": 2.0,
-		"on-click": "pamixer -t",
+		"scroll-step"   : 2.0,
+		"on-click"      : "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
 	"backlight": {
-		"device": "intel_backlight",
-		"format": "{icon} {percent}%",
+		"device"      : "intel_backlight",
+		"format"      : "{icon} {percent}%",
 		"format-icons": ["󰃞", "󰃟", "󰃠"]
 	},
 	"network": {
 		//"interface": "wlan0",
 		"format": "{ifname}",
-		"format-wifi": "{icon} {signalStrength}%",
-		"format-icons": ["󰤨"],
-		"format-ethernet": "{ipaddr}/{cidr} 󰊗",
-		"format-disconnected": "", // Hide module
-		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
-		"tooltip-format-wifi": "{essid}",
-		"tooltip-format-ethernet": "{ifname}",
+		"format-wifi"                : "{icon} {signalStrength}%",
+		"format-icons"               : ["󰤨"],
+		"format-ethernet"            : "{ipaddr}/{cidr} 󰊗",
+		"format-disconnected"        : "", // Hide module
+		"tooltip-format"             : "{ifname} via {gwaddr} 󰊗",
+		"tooltip-format-wifi"        : "{essid}",
+		"tooltip-format-ethernet"    : "{ifname}",
 		"tooltip-format-disconnected": "Disconnected",
-		"on-click": "kitty iwctl",
-		"max-length": 50
+		"on-click"                   : "kitty iwctl",
+		"max-length"                 : 50
 	},
 	"battery": {
-		"interval": 3, 
+		"interval": 3,
 		"states": {
 			"good": 95,
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",	
+		"format": "{icon} {capacity}%",
 		"format-plugged": "󰂄 {capacity}%",
 		"format-charging": "󰂄 {capacity}%",
 		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
