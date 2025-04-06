@@ -127,6 +127,7 @@
 			"critical": 15
 		},
 		"format"         : "{icon} {capacity}%",
+		"on-click"       : "kitty auto-cpufreq --stats",
 		"format-time"    : "{H}h {M}m",
 		"format-icons"   : ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		"format-plugged" : "󰂄 {capacity}%",
