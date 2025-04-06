@@ -127,9 +127,10 @@
 			"critical": 15
 		},
 		"format"         : "{icon} {capacity}%",
+		"format-time"    : "{H}h {M}m",
+		"format-icons"   : ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		"format-plugged" : "󰂄 {capacity}%",
-		"format-charging": "󰂄 {capacity}%",
-		"format-icons"   : ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+		"format-charging": "󰂄 {capacity}%"
 	},
 	"tray": {
 		"spacing"  : 4,
