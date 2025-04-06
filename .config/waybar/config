@@ -90,8 +90,7 @@
 			"default-muted": "󰝟"
 		},
 		"scroll-step"   : 2,
-		"on-click"      : "pamixer -t",
-		"on-click-right": "pavucontrol"
+		"on-click"      : "pavucontrol"
 	},
 	"backlight/slider": {
 		"min"		 : 0,
