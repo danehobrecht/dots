@@ -1,5 +1,5 @@
 // -*- mode: json -*-
-// Symbols: https://pictogrammers.com/library/mdi/
+// Icons: https://pictogrammers.com/library/mdi/
 
 {
 	/// General
@@ -89,34 +89,36 @@
 			"headphones"   : "",
 			"default-muted": "󰝟"
 		},
-		"scroll-step"   : 2.0,
+		"scroll-step"   : 2,
 		"on-click"      : "pamixer -t",
 		"on-click-right": "pavucontrol"
 	},
 	"backlight/slider": {
 		"min"		 : 0,
 		"max"		 : 100,
-		"orientation": "horizontal",
-		"device"     : "intel_backlight"
+		"device"     : "amdgpu_bl1",
+		"orientation": "horizontal"
 	},
 	"backlight": {
 		"tooltip"     : false,
+		"device"      : "amdgpu_bl1",
 		"format-icons": ["󰃞", "󰃟", "󰃠"],
-		"device"      : "intel_backlight",
 		"format"      : "{icon} {percent}%"
 	},
 	"network": {
+		"max-length"                 : 50,
+		"on-click"                   : "kitty iwctl",
+
 		"format"                     : "{ifname}",
 		"format-wifi"                : "{icon} {signalStrength}%",
 		"format-icons"               : ["󰤨"],
 		"format-ethernet"            : "{ipaddr}/{cidr} 󰊗",
 		"format-disconnected"        : "", // Hide module
+
 		"tooltip-format"             : "{ifname} via {gwaddr} 󰊗",
 		"tooltip-format-wifi"        : "{essid}",
-		"tooltip-format-ethernet"    : "{ifname}",
-		"tooltip-format-disconnected": "Disconnected",
-		"on-click"                   : "kitty iwctl",
-		"max-length"                 : 50
+		"tooltip-format-ethernet"    : " {ifname}",
+		"tooltip-format-disconnected": "Disconnected"
 	},
 	"battery": {
 		"interval": 3,

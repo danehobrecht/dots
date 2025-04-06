@@ -61,6 +61,7 @@ window#waybar {
 }
 #backlight-slider highlight {
 	border: none;
+	min-width: 10px; /* Prevents artifacting at values less than 10% */
 	min-height: 10px; /* Translates to 12 with border */
 	border-radius: 8px;
 	background-color: #ffffff;
