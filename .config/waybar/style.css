@@ -44,7 +44,8 @@ window#waybar {
 	margin-right: 0px;
 	border-radius: 8px 0px 0px 8px;
 }
-#backlight-slider slider {
+/* Spawn circular knob when hovering (default style) */
+#backlight-slider:not(:hover) slider {
 	opacity: 0;
 	border: none;
 	min-width: 0px;
