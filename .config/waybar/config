@@ -19,6 +19,7 @@
 	],
 	"modules-right": [
 		"custom/wellbeing",
+		"disk",
 		"pulseaudio",
 		"network",
 		"backlight/slider",
@@ -74,6 +75,13 @@
 		"format-icons"  : ["󰗶"],
 		"tooltip-format": "Well-being",
 		"on-click"      : "kitty --hold hypr-wellbeing --show"
+	},
+	"disk": {
+		"format"        : "󰆓",
+		"interval"      : 60,
+		"tooltip-format": "{specific_used:0.2f} / {specific_total:0.2f} GB",
+		"unit"          : "GB",
+		"on-click"      : "kitty --hold df -h"
 	},
 	"pulseaudio": {
 		"format"             : "{format_source} {icon} {volume:2}%",
