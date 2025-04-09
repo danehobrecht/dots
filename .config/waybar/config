@@ -93,7 +93,8 @@
 		"tooltip"     : false,
 		"device"      : "amdgpu_bl1",
 		"format-icons": ["󰃞", "󰃟", "󰃠"],
-		"format"      : "{icon} {percent}%"
+		"format"      : "{icon} {percent}%",
+		"on-click"    : "kitty --hold brightnessctl"
 	},
 	"pulseaudio": {
 		"format"             : "{format_source} {icon} {volume:2}%",
