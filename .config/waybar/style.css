@@ -3,22 +3,29 @@
 	font-family: "Material Design Icons", monospace;
 }
 
+/* Customize tooltip popup (calendar, etc.)
+tooltip { background: rgba(26, 26, 26, 0.84); }
+*/
+
 window#waybar {
 	/* border-radius: 0px 0px 8px 8px; */
 	color: #ffffff;
 	background: rgba(41, 43, 46, 1.0); /* #292b2e; */
 }
 
+/* Left */
 #windows,
+/* Middle */
 #clock.1,
 #clock.2,
 #clock.3,
+/* Right */
 #custom-wellbeing,
 #disk,
-#pulseaudio,
-#network,
 #backlight,
 #backlight-slider,
+#pulseaudio,
+#network,
 #battery,
 #tray {
 	margin: 4px;
@@ -27,6 +34,13 @@ window#waybar {
 	background: #1a1a1a;
 }
 
+/* Customize active workspace
+#workspaces button.focused
+
+#workspaces button.active {}
+
+#workspaces button:hover {}
+*/
 #workspaces button {
 	color: #ffffff;
 	border-radius: 8px;
@@ -68,15 +82,3 @@ window#waybar {
 	border-radius: 8px;
 	background-color: #ffffff;
 }
-
-/* Customize tooltip popup (calendar, etc.)
-tooltip { background: rgba(26, 26, 26, 0.84); }
-*/
-
-/* Customize active workspace
-#workspaces button.focused
-
-#workspaces button.active {}
-
-#workspaces button:hover {}
-*/

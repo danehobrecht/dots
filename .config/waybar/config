@@ -20,10 +20,10 @@
 	"modules-right": [
 		"custom/wellbeing",
 		"disk",
-		"pulseaudio",
-		"network",
 		"backlight/slider",
 		"backlight",
+		"pulseaudio",
+		"network",
 		"battery",
 		"tray"
 	],
@@ -77,11 +77,23 @@
 		"on-click"      : "kitty --hold hypr-wellbeing --show"
 	},
 	"disk": {
-		"format"        : "󰆓",
+		"format"        : "󰋊",
 		"interval"      : 60,
 		"tooltip-format": "{specific_used:0.2f} / {specific_total:0.2f} GB",
 		"unit"          : "GB",
 		"on-click"      : "kitty --hold df -h"
+	},
+	"backlight/slider": {
+		"min"		 : 0,
+		"max"		 : 100,
+		"device"     : "amdgpu_bl1",
+		"orientation": "horizontal"
+	},
+	"backlight": {
+		"tooltip"     : false,
+		"device"      : "amdgpu_bl1",
+		"format-icons": ["󰃞", "󰃟", "󰃠"],
+		"format"      : "{icon} {percent}%"
 	},
 	"pulseaudio": {
 		"format"             : "{format_source} {icon} {volume:2}%",
@@ -99,18 +111,6 @@
 		},
 		"scroll-step"   : 2,
 		"on-click"      : "pavucontrol"
-	},
-	"backlight/slider": {
-		"min"		 : 0,
-		"max"		 : 100,
-		"device"     : "amdgpu_bl1",
-		"orientation": "horizontal"
-	},
-	"backlight": {
-		"tooltip"     : false,
-		"device"      : "amdgpu_bl1",
-		"format-icons": ["󰃞", "󰃟", "󰃠"],
-		"format"      : "{icon} {percent}%"
 	},
 	"network": {
 		"max-length"                 : 50,
