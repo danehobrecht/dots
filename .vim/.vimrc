@@ -1,15 +1,16 @@
 " Import plugins
-"call plug#begin()
-"	Plug 'davidhalter/jedi-vim'
-"	Plug 'lifepillar/vim-mucomplete'
-"call plug#end()
+call plug#begin()
+	Plug 'jalvesaq/Nvim-R'
+	Plug 'davidhalter/jedi-vim'
+	Plug 'lifepillar/vim-mucomplete'
+call plug#end()
 
 " `mucomplete` settings
-"set shortmess+=c
-"set completeopt-=preview
-"set completeopt+=noselect,menuone
-"let g:jedi#popup_on_dot = 1
-"let g:mucomplete#enable_auto_at_startup = 1
+set shortmess+=c
+set completeopt-=preview
+set completeopt+=noselect,menuone
+let g:jedi#popup_on_dot = 1
+let g:mucomplete#enable_auto_at_startup = 1
 
 " Only do this part when Vim was compiled with the +eval feature.
 if 1
@@ -18,7 +19,7 @@ if 1
 	" 'cindent' is on in C files, etc.
 	" Also load indent files, to automatically do language-dependent indenting.
 	" Revert with ":filetype off".
-	filetype plugin indent off
+	filetype plugin indent on
 	" Put these in an autocmd group, so that you can revert them with:
 	" ":augroup vimStartup | au! | augroup END"
 	augroup vimStartup

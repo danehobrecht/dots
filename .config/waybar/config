@@ -77,7 +77,7 @@
 		"on-click"      : "kitty --hold hypr-wellbeing --show"
 	},
 	"disk": {
-		"format"        : "󰋊",
+		"format"        : "󰉉",
 		"interval"      : 60,
 		"tooltip-format": "{specific_used:0.2f} / {specific_total:0.2f} GB",
 		"unit"          : "GB",
