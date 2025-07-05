@@ -9,3 +9,5 @@ export PATH="$PATH:/home/dane/.local/bin"
 
 # Fix disappearing cursor on `sway`
 WLR_NO_HARDWARE_CURSORS=1
+
+export CDPATH=.:/home/dane/documents/education/uci:/home/dane/documents/git
