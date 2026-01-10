@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/dane/.config/kitty'
 let g:netrw_dirhist_7='/home/dane/documents/other/performing-arts/stage/death-of-a-salesman'
 let g:netrw_dirhist_6='/home/dane/documents/git/danehobrecht.github.io'
 let g:netrw_dirhist_5='/home/dane/documents/education/uci'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_2='/home/dane/documents/education/uci'
 let g:netrw_dirhist_1='/home/dane/documents/education/uci/inf-143'
 let g:netrw_dirhist_0='/home/dane/documents/git/nasa-year-on-psyche/.git'
 let g:netrw_dirhist_9='/home/dane/documents/git/general-gnuledge'
-let g:netrw_dirhist_8='/home/dane/documents/git/nasa-year-on-psyche/Assets/Scripts'
